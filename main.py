@@ -196,5 +196,14 @@ def find_average(lst):
 average_result = find_average(my_list)
 print(f"Среднее значение списка: {average_result}")
 
+product-list = []
+while True:
+    new_product = input("введите новый продукт(или 'стоп' для завершения):")
+    if new_product.lower() == 'стоп'
+        break 
+    product_list.append(new_product)
+print('список продуктов:') 
+for product in product_list:
+    print(product)
 
         
