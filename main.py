@@ -179,31 +179,96 @@
 # filtered_result = filter_list(my_list, lambda x: x % 2 == 0)
 # print(f"Отфильтрованный список (четные числа): {filtered_result}")
 
-def remove_duplicates(lst):
-    unique_list = []
-    for element in lst:
-        if element not in unique_list:
-            unique_list.append(element)
-    return unique_list
+# def remove_duplicates(lst):
+#     unique_list = []
+#     for element in lst:
+#         if element not in unique_list:
+#             unique_list.append(element)
+#     return unique_list
 
 
-my_list = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
-unique_list = remove_duplicates(my_list)
-print(f"Список без повторяющихся чисел: {unique_list}")
-def find_average(lst):
-    average = sum(lst) / len(lst)
-    return average
-average_result = find_average(my_list)
-print(f"Среднее значение списка: {average_result}")
+# my_list = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
+# unique_list = remove_duplicates(my_list)
+# print(f"Список без повторяющихся чисел: {unique_list}")
+# def find_average(lst):
+#     average = sum(lst) / len(lst)
+#     return average
+# average_result = find_average(my_list)
+# print(f"Среднее значение списка: {average_result}")
 
-product-list = []
-while True:
-    new_product = input("введите новый продукт(или 'стоп' для завершения):")
-    if new_product.lower() == 'стоп'
-        break 
-    product_list.append(new_product)
-print('список продуктов:') 
-for product in product_list:
-    print(product)
+# product-list = []
+# while True:
+#     new_product = input("введите новый продукт(или 'стоп' для завершения):")
+#     if new_product.lower() == 'стоп'
+#         break 
+#     product_list.append(new_product)
+# print('список продуктов:') 
+# for product in product_list:
+#     print(product)
+
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, product, quantity):
+        self.items.append({"product": product, "quantity": quantity})
+
+    def calculate_total(self):
+        total = 0
+        for item in self.items:
+            total += item["product"].price * item["quantity"]
+        return total
+
+def display_menu():
+    print("1. Яблоки - $1.00")
+    print("2. Бананы - $0.75")
+    print("3. Груши - $1.25")
+    print("4. Завершить покупки")
+
+def display_cart(cart):
+    print("\nВаша корзина:")
+    for item in cart.items:
+        print(f"{item['product'].name} x {item['quantity']} - ${item['product'].price * item['quantity']:.2f}")
+    print(f"\nИтого: ${cart.calculate_total():.2f}")
+
+def main():
+    apple = Product("Яблоки", 1.00)
+    banana = Product("Бананы", 0.75)
+    pear = Product("Груши", 1.25)
+
+    cart = ShoppingCart()
+
+    while True:
+        display_menu()
+        choice = input("Выберите продукт (1-4): ")
+
+        if choice == "1":
+            quantity = int(input("Введите количество яблок: "))
+            cart.add_item(apple, quantity)
+        elif choice == "2":
+            quantity = int(input("Введите количество бананов: "))
+            cart.add_item(banana, quantity)
+        elif choice == "3":
+            quantity = int(input("Введите количество груш: "))
+            cart.add_item(pear, quantity)
+        elif choice == "4":
+            break
+        else:
+            print("Неверный выбор. Попробуйте снова.")
+
+        display_cart(cart)
+
+    total = cart.calculate_total()
+    print(f"\nИтого: ${total:.2f}")
+    print("Спасибо за покупки!")
+
+if __name__ == "__main__":
+    main()
+
 
         
