@@ -1,200 +1,240 @@
-# num1 = int(input())
-# num2 = int(input())
-# oper = input()
+# import random
+# #виселица
+# def choose_word():
+#     words = ["apple", "banana", "cherry", "orange", "grape"]
+#     return random.choice(words)
 
-# if oper == "+":
-#     print(num1 + num2)
-# # elif oper == "-":
-#     print(num1 - num2)
-# elif oper == "/":
-#     print(num1 / num2)
-# elif oper == "*":
-#     print(num1 * num2)
+# def display_word(word, guessed_letters):
+#     display = ""
+#     for letter in word:
+#         if letter in guessed_letters:
+#             display += letter
+#         else:
+#             display += "_"
+#     return display
+
+# def hangman():
+#     word = choose_word()
+#     guessed_letters = []
+#     attempts = 6
+
+#     print("Welcome to Hangman!")
+#     while True:
+#         print(display_word(word, guessed_letters))
+#         guess = input("Guess a letter: ").lower()
+
+#         if guess in guessed_letters:
+#             print("You already guessed that letter.")
+#         elif guess in word:
+#             guessed_letters.append(guess)
+#             if display_word(word, guessed_letters) == word:
+#                 print("Congratulations! You guessed the word: " + word)
+#                 break
+#         else:
+#             attempts -= 1
+#             print("Incorrect guess. Attempts left:", attempts)
+#             if attempts == 0:
+#                 print("You ran out of attempts. The word was:", word)
+#                 break
+
+# hangman()
+# # print("Привет, мир!")
+# num1 = float(input("Введите первое число: "))
+# num2 = float(input("Введите второе число: "))
+
+# sum = num1 + num2
+# print("Сумма чисел равна:", sum)
+# num = int(input("Введите число: "))
+
+# if num % 2 == 0:
+#     print("Число", num, "является четным.")
 # else:
-#     print("error")
+#     print("Число", num, "является нечетным.")
+# num1 = float(input("Введите первое число: "))
+# num2 = float(input("Введите второе число: "))
+# num3 = float(input("Введите третье число: "))
 
-# for i in range(1,20):
-#     print(i)
+# max_num = max(num1, num2, num3)
+# print("Наибольшее число:", max_num)
+# for i in range(1, 11):
+#     for j in range(1, 11):
+#         result = i * j
+#         print(f"{i} x {j} = {result}")
+# year = int(input("Введите год: "))
 
-# print(list[0])
-# for i in range(2,100, 2):
-#     print(i)
-
-
-
-# for i in range(1,20):
-#     print(i)
-    
-# sum = 0  
-
-# for number in range(1, 101):
-#     sum += number
-
-# print(sum)
-
-
-# n = int(input("Введите целое число n: "))
-
-
-# if n < 0:
-#     print("число отрицательное")
-# elif n == 0:
-#     print("Факториал числа 0 равен 1.")
+# if (year % 4 == 0 and year % 100 != 0):
+#     print(year, "год является високосным.")
 # else:
-#     factorial = 1 
-#     for i in range(1, n + 1):
-#         factorial *= i 
-#     print(f"Факториал числа {n} равен {factorial}")
-# num = int(input("Введите целое число: "))
+#     print(year, "год не является високосным.")
+# numbers = []
+# for i in range(5):
+#     num = float(input(f"Введите {i+1}-е число: "))
+#     numbers.append(num)
 
-
-# if num <= 1:
-#     is_prime = False
-# else:
-#     is_prime = True
+# average = sum(numbers) / len(numbers)
+# print("Среднее значение чисел:", average)
+# num = int(input("Введите число: "))
+# num = 345
+# if num > 1:
 #     for i in range(2, num):
-#         if num % i == 0:
-#             is_prime = False
+#         if (num % i) == 0:
+#             print(num, "не является простым числом.")
 #             break
-
-
-# if is_prime:
-#     print(f"{num} - простое число")
-
-# for i in range(1, 10):
-#         result = i * 5 
-#         print(f"{i} * 5 *  = {result}")
-# time = input("Enter the time (hh:mm): ")
-# hours = int(time[:2])
-# time_of_day = ""
-
-# if 5 <= hours < 12:
-#     time_of_day = "Morning"
-# elif 12 <= hours < 18:
-#     time_of_day = "Afternoon"
-# elif 18 <= hours < 22:
-#     time_of_day = "Evening"
+#     else:
+#         print(num, "является простым числом.")
 # else:
-#     time_of_day = "Night"
+#     print(num, "не является простым числом.")
+# gradus = float(input("Введите температуру в градусах Цельсия: "))
+# far = (gradus * 9/5) + 32
+# print("temperature in far:", far)
+# import math
 
-# print(f"The time of day is: {time_of_day}")
-# for x in range(1, 11):
-# 	for y in range(1, 11):
-# 		print(x * y =  x * y, end="\n")
-# 	print()
-# for x in range(1, 11):
-# 	for y in range(1, 11):
-# 		print(x, "*", y, "=", x * y, end="\n")
-# 	print()
-# num1 = int(input("WWEDITE"))
-# num2 = int(input("WWEDITE"))
-# while True:
-#     znak = input("wwedite znak")
-#     if znak == "+":
-#         print("Resultat:",num1 + num2)
-#         break
-#     elif znak == "-":
-#         print("Resultat:",num1 - num2)
-#         break
-#     elif znak == "*":
-#         print("Resultat:",num1 * num2)
-#         break
-#     elif znak == "/":
-#         print("Resultat:",num1 / num2)
-#         break
+# radius = float(input("Введите радиус круга: "))
+# area = math.pi * radius**2
+# print("Площадь круга с радиусом", radius, "равна", area)
+# def fibonacci(n):
+#     if n <= 0:
+#         return []
+#     elif n == 1:
+#         return [0]
+#     elif n == 2:
+#         return [0, 1]
 #     else:
-#         print("Ti eblan, wwedi norm znak")
-#обьедените две строки в одну
-# a = "Hello"
-# b = "Adilet"
-# print(a + b)
+#         fib = fibonacci(n - 1)
+#         fib.append(fib[-1] + fib[-2])
+#         return fib
 
-# original_string = "patata"
-# changed_string = ''
+# n = int(input("Введите количество чисел Фибоначчи: "))
+# fibonacci_sequence = fibonacci(n)
 
-# for i in original_string:
-#     if i == 'a':
-#         changed_string += 'e'
-#     else:
-#         changed_string += i
+# print("Последовательность чисел Фибоначчи:")
+# print(fibonacci_sequence)
+# def find_intersection(arr1, arr2):
+#     intersection = []
+#     for element in arr1:
+#         if element in arr2 and element not in intersection:
+#             intersection.append(element)
+#     return intersection
 
-# print(changed_string)
-# # b = "Adilet"
-# # print(
-# for i in range(1, 11):
+# array1 = [1, 2, 3, 4, 5]
+# array2 = [3, 4, 5, 6, 7]
+# result = find_intersection(array1, array2)
+# print(result)
+# allowed_usernames = ["hello1", "oleg66", "ali55", "killer07"]
 
-#     print(i)
+# def check_permission(func):
+#     def wrapper(username):
+#         if username in allowed_usernames:
+#             func(username)
+#         else:
+#             print("u tebya netu prav.")
+#     return wrapper
+
+# @check_permission
+# def greet_user(username):
+#     print("Hello", username)
 
 
-# num = int(input())
+# greet_user("oleg66")  
+# greet_user("john")    
+# greet_user('hello 1')
+# greet_user('Dilyar temnii bro')
+# greet_user('feministka')
+# def find_max(arr):
+#     return max(arr)
 
+# print(find_max([1, 5, 3, 9, 2]))  # 9
+# def is_prime(num):
+#     if num <= 1:
+#         return False
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             return False
+#     return True
 
-# for i in range(1, 11):
-#     print(f"{num} * {i} = {num * i}")
+# print(is_prime(7))   # True
+# print(is_prime(12))  # False
+# def find_average(arr):
+#     return sum(arr) / len(arr)
 
-# for i in range(2,12,2):
-#    print(i)
-# num1 = int(input())
-# if num1<18:
-#     print("малолетка")
-# if num1>18:
-#     print("совершенолет")
+# print(find_average([1, 2, 3, 4, 5]))  # 3.0
+# def count_words(s):
+#     return len(s.split())
 
-# for i in range(1, 11):
-#     for y in range(1,11):
-#         print(f"{i}*{y} = {i*y}")
+# print(count_words("Hello, World!"))  # 2
+# def binary_search(arr, target):
+#     left, right = 0, len(arr) - 1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] < target:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return -1
 
-# for i in range(1,1000001):
-#     print(i)
+# print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9], 5))  # 4
+# def is_palindrome(s):
+#     return s == s[::-1]
+
+# print(is_palindrome("racecar"))  # True
+# # print(is_palindrome("hello"))    # False
+# def reverse_number(num):
+#     return int(str(abs(num))[::-1]) 
+
+# print(reverse_number(123))   # 321
+# def find_lcm(a, b):
+#     def gcd(x, y):
+#         return x if y == 0 else gcd(y, x % y)
     
-    # list = [1,2,3,4,5,6,7]
+#     return (a * b) // gcd(a, b)
 
-    # def sum_of_items(nums):
-    #     a = 0
-    #     nums +=a
-    #     print (a)
-# my_list = [1, 2, 3, 4, 5]
-# def find_sum(lst):
-#     total_sum = sum(lst)
-#     return total_sum
+# print(find_lcm(12, 15))  
+# def factorial(num):
+#     if num == 1:
+#         return 1
+#     else:
+#         return num * factorial(num - 1)
 
-# def multiply_list(lst, factor):
-#     multiplied_list = [element * factor for element in lst]
-#     return multiplied_list
+# print(factorial(5))  # 120
 
-# sum_result = find_sum(my_list)
-# print(f"Сумма элементов списка: {sum_result}")
+# import requests
+# def quote_generate():
+#     response = requests.get("https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en")
+#     data = response.json()
+#     author = data["quoteAuthor"]
+#     quote = data["quoteText"]
+#     return  author, quote
 
-# multiplied_result = multiply_list(my_list, 2)
-# print(f"Умноженный список: {multiplied_result}")
+# author, quote = quote_generate()
+# print("author",author)
+# print('quote',{quote})
+# #app makes random quotes created by me
 
-
-# def filter_list(lst, condition):
-#     filtered_list = [element for element in lst if condition(element)]
-#     return filtered_list
-
-# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#классы методы обьекты методы атрибуты
 
 
-# filtered_result = filter_list(my_list, lambda x: x % 2 == 0)
-# print(f"Отфильтрованный список (четные числа): {filtered_result}")
 
-def remove_duplicates(lst):
-    unique_list = []
-    for element in lst:
-        if element not in unique_list:
-            unique_list.append(element)
-    return unique_list
-
-
-my_list = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
-unique_list = remove_duplicates(my_list)
-print(f"Список без повторяющихся чисел: {unique_list}")
-def find_average(lst):
-    average = sum(lst) / len(lst)
-    return average
-average_result = find_average(my_list)
-print(f"Среднее значение списка: {average_result}")
-
-
+# class Car:
+#     def __init__(self,model,color ,price,year, speed, tank=60):
+#         self.model = model
+#         self.color = color
+#         self.price = price
+#         self.year = year
+#         self.speed = speed
+#         self.tank = tank
+    
+#     def get_info(self):
+#         return f"{self.model} {self.color} {self.price} {self.year} {self.speed} {self.tank}"
+    
+#     def sell_car(self,new_owner):
+#         self.owner = new_owner
+#         print(f"{self.model} sold to {self.owner}")
+#     def start(self):
+#         self.engine = True
+#         print("двигатель включен")
+#     def stop(self):
+#         self.engine = False
+#         print('двигатель включен')
         
